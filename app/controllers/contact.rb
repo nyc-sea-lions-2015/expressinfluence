@@ -13,7 +13,7 @@ get '/contact/new' do
 end
 
 post '/contact/new' do
-  @contact = Contact.create(name: params[:name], industry: params[:industry])
+  @contact = Contact.create(name: params[:name], industry: params[:industry], user_id: session[:user_id])
   Comment.create(content: params[:content], contact_id: @contact.id, user_id: session[:user_id])
 
   redirect "/contact/#{@contact.id}"
