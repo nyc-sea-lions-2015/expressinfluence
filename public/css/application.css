@@ -3,7 +3,7 @@
   height: 400px;
   width: 45%;
   float: left;
-  border: solid blue 1px;
+  border: solid #cccccc 1px;
   overflow: scroll;
 }
 
