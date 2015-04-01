@@ -7,6 +7,12 @@
   <title></title>
 </head>
 <body>
+  <% if session[:user_id] %>
+    <ul id='header'>
+        <a class="btn btn-info btn-sm" id="home_button" href="/user/<%=session[:user_id]%>" role="button">Home</a>
+        <a class="btn btn-info btn-sm" id="home_button" href="/authentication/logout" role="button">Logout</a>
+    </ul>
+  <%end%>
 
 <div class="container-fluid">
   <%= yield %>
@@ -17,10 +23,4 @@
   <script src="/js/application.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
-  <% if session[:user_id] %>
-      <ul id='header'>
-          <a class="btn btn-info btn-sm" id="home_button" href="/user/<%=session[:user_id]%>" role="button">Home</a>
-          <a class="btn btn-info btn-sm" id="home_button" href="/authentication/logout" role="button">Logout</a>
-      </ul>
-  <%end%>
 </html>
