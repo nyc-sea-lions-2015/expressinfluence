@@ -10,6 +10,11 @@ a{
   color: #121D27
 }
 
+.auth-login{
+  height:100vh;
+  background-image: url('/tree.jpg');
+}
+
 .contact-tabs{
   display:inline !important;
 }
