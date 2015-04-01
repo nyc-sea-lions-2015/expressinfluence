@@ -14,7 +14,7 @@
     <h1>Contacts:</h1>
     <ol>
       <% @contacts.each do |contact| %>
-        <dt><li class="contact"><a href='/contact/<%= contact.id %>'><%= contact.name %></a><dd>Created: <%=time(contact)%> minutes ago</dd></li></dt>
+        <%= erb :"/_contacts", locals: {contact: contact} %>
       <%end%>
     </ol>
   </div>
