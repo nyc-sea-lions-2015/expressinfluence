@@ -2,9 +2,9 @@ require 'faker'
 
 kev = User.create(email: "kev", password: "123")
 
-con1 = Contact.create(name:"Mike", industry:"finance",user_id: kev.id)
-con2 = Contact.create(name:"Gentry", industry:"technology",user_id: kev.id)
-con3 = Contact.create(name:"Ben", industry:"entertainment",user_id: kev.id)
+con1 = Contact.create(name:"Mike", industry:"Finance",user_id: kev.id)
+con2 = Contact.create(name:"Gentry", industry:"Technology",user_id: kev.id)
+con3 = Contact.create(name:"Ben", industry:"Entertainment",user_id: kev.id)
 
 com1 = Comment.create(content: "Mike has 2 kids, a wife and a dog.", user_id: kev.id, contact_id: con1.id)
 com2 = Comment.create(content: "Mike Enjoys Red Wine", user_id: kev.id, contact_id: con1.id)
@@ -18,6 +18,22 @@ com6 = Comment.create(content: "Is greek and enjoys greek food.", user_id: kev.i
   Contact.create(
     user_id: kev.id,
     name: Faker::Name.first_name,
-    industry: Faker::Company.catch_phrase
+    industry: 'Technology'
+    )
+end
+
+15.times do
+  Contact.create(
+    user_id: kev.id,
+    name: Faker::Name.first_name,
+    industry: 'Finance'
+    )
+end
+
+15.times do
+  Contact.create(
+    user_id: kev.id,
+    name: Faker::Name.first_name,
+    industry: 'Entertainment'
     )
 end
