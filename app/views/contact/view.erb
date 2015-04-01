@@ -1,5 +1,5 @@
 
-<div class="row">
+<div id="form_slot" class="row">
   <div class="col-md-12">
     <div class="thumbnail">
       <img src="/face.jpg">
@@ -9,6 +9,8 @@
       </div>
 
       <% @comments.each do |comment| %>
+
+      <div class='comment_table'>
         <p><%=comment.content%> | <%=comment.created_at%>
           <br>
   <!--    The following allows for deleting Comment -->
@@ -20,18 +22,28 @@
               </div>
           </form>
         </p>
+      </div>
       <%end%>
 
     </div>
 <!--    The following allows for editing deleting and commenting on Contact -->
-          <form action="/contact/delete/<%=@contact.id%>" method="post">
-        <div style="margin:0;padding:0">
+<div class='contact_buttons'>
+  <ul>
+          <div style="margin:0;padding:0">
+          <li><form action="/contact/delete/<%=@contact.id%>" method="post">
+            <br>
           <input name="_method" type="hidden" value="delete"/>
+            <br>
           <input type='submit' value='Delete Contact!' />
-          <a href="/contact/edit/<%=@contact.id%>" class="btn btn-primary" role="button">Edit Contact</a>
-          <a href="/comment/new/<%=@contact.id%>" class="btn btn-primary" role="button">Comment</a>
+            <br>
+        </form></li>
+         <li> <a href="/contact/edit/<%=@contact.id%>" class="btn btn-primary" role="button">Edit Contact</a></li>
+          <div >
+          <li> <a id="new_comment_button" href="/comment/new/<%=@contact.id%>" class="btn btn-primary" role="button">Comment</a></li>
+          </div>
           <hr>
         </div>
-      </form>
   </div>
+</div>
+<ul>
 </div>

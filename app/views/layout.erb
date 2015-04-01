@@ -12,14 +12,15 @@
   <%= yield %>
 </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/js/application.js"></script>
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src ="/js/comment.js"></script>
+  <script src="/js/application.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
   <% if session[:user_id] %>
-    <a class="btn btn-info btn-sm" id="home_button" href="/user/<%=session[:user_id]%>" role="button">Home</a>
-    <a class="btn btn-info btn-sm" id="home_button" href="/authentication/logout" role="button">Logout</a>
+      <ul id='header'>
+          <a class="btn btn-info btn-sm" id="home_button" href="/user/<%=session[:user_id]%>" role="button">Home</a>
+          <a class="btn btn-info btn-sm" id="home_button" href="/authentication/logout" role="button">Logout</a>
+      </ul>
   <%end%>
 </html>

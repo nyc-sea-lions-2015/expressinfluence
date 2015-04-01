@@ -1,11 +1,19 @@
 .contact-list{
+  background-color: gray;
   height: 400px;
   width: 45%;
-  float: left;
-  border: solid black 1px;
+  float: right;
+  border: solid blue 1px;
   overflow: scroll;
 }
 
+.contact-tabs{
+  display:inline !important;
+}
+
+.jumbotron{
+  text-align: center;
+}
 .thumbnail{
   text-align: center;
 }
@@ -15,7 +23,7 @@
   }
 
 body {
-  background: url('/tree.jpg');
+  background-color: gray;
 }
 
 .auth-login{
@@ -26,3 +34,14 @@ body {
   text-align: center;
 }
 
+#header li {
+  display: inline;
+}
+
+.contact_buttons{
+  list-style: none;
+}
+
+.contact_buttons li{
+  display: inline;
+}

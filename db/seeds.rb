@@ -29,11 +29,20 @@ end
     industry: 'Finance'
     )
 end
-
+@contacts = []
 15.times do
-  Contact.create(
+  @contacts << Contact.create(
     user_id: kev.id,
     name: Faker::Name.first_name,
     industry: 'Entertainment'
     )
+end
+
+
+@contacts.each do |contact|
+    Comment.create(
+        content: Faker::Lorem,
+        user_id: kev.id,
+        contact_id: contact.id
+        )
 end
