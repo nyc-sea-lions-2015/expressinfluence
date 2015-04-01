@@ -25,3 +25,11 @@ get '/contact/:id' do
 
   erb :'contact/view'
 end
+
+delete '/contact/delete/:id' do
+  p params
+  p params
+  @contact = Contact.find(params[:id])
+  @contact.destroy
+  redirect '/'
+end

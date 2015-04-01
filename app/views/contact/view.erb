@@ -12,6 +12,12 @@
       <% @comments.each do |comment| %>
         <p><%=comment.content%> | <%=comment.created_at%></p>
       <%end%>
+      <form action="/contact/delete/<%=@contact.id%>" method="post">
+        <div style="margin:0;padding:0">
+          <input name="_method" type="hidden" value="delete"/>
+          <input type='submit' value='Delete Contact!' />
+        </div>
+      </form>
     </div>
   </div>
 </div>
