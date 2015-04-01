@@ -2,19 +2,24 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="/css/normalize.css">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/application.css">
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/js/application.js"></script>
-
   <title></title>
 </head>
 <body>
+
+<div class="container-fluid">
   <%= yield %>
-</body>
   <% if session[:user_id] %>
-    <a href="/user/<%=session[:user_id]%>">Home</a>
-    <a href="/authentication/logout">Logout</a>
+    <a class="btn btn-info btn-sm" id="home_button" href="/user/<%=session[:user_id]%>" role="button">Home</a>
+    <a class="btn btn-info btn-sm" id="home_button" href="/authentication/logout" role="button">Logout</a>
   <%end%>
+</div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src ="/js/comment.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
 </html>

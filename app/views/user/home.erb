@@ -1,1 +1,20 @@
-This is the user homepage
+<div class="jumbotron">
+  <h1>Welcome <%=@user.email%></h1>
+  <p> Search Contact by Industry: <div id='search_bar'>
+      <form action="/perspective/search" method="get">
+
+        <input type="text" name="industry" placeholder="Industry">
+        <input type="submit" value="Search Contact!">
+      </form>
+ </div></p>
+  <p><a class="btn btn-info btn-lg" id="home_button" href="/contact/new" role="button">New Contact</a></p>
+</div>
+
+  <div class="contact-list">
+    <h2>Contacts:</h2>
+    <ol>
+      <% @contacts.each do |contact| %>
+        <dt><li class="contact"><a href='/contact/<%= contact.id %>'><%= contact.name %></a></li></dt>
+      <%end%>
+    </ol>
+  </div>
