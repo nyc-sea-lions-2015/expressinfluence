@@ -4,7 +4,10 @@ get '/comment/new/:id' do
   erb :'comment/new'
 end
 
-post '/comment/new' do
+post '/comment/new/:id' do
+  @comment= Comment.create(content: params[:content], user_id: session[:user_id], contact_id: params[:id])
+  @contact = Contact.find(params[:id])
+
 
   redirect "/contact/#{@contact.id}"
 end
