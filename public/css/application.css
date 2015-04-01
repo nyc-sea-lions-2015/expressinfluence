@@ -6,6 +6,9 @@
   border: solid #cccccc 1px;
   overflow: scroll;
 }
+a{
+  color: #121D27
+}
 
 .contact-tabs{
   display:inline !important;
