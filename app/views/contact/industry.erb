@@ -1,0 +1,11 @@
+  <h2><%=@industry%> Contacts:</h2>
+  <div class="contact-list">
+    <ol>
+      <% @contacts.each do |contact| %>
+        <dt><li class="contact"><a href='/contact/<%= contact.id %>'><%= contact.name %> | <%=contact.industry%></a></li></dt>
+      <%end%>
+    </ol>
+  </div>
+
+    <p><a class="btn btn-info btn-lg" id="home_button" href="/contact/new" role="button">New Contact</a></p>
+
