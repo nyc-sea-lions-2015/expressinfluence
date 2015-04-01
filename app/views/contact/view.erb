@@ -1,1 +1,17 @@
-This will display the specific contact information and comments from user
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="thumbnail">
+      <img src="/face.jpg">
+      <div class="caption">
+        <h3><%=@contact.name%></h3>
+        <h5><%=@contact.industry%></h5>
+        <p><a href="/comment/new/<%=@contact.id%>" class="btn btn-primary" role="button">Comment</a>
+        </p>
+      </div>
+      <% @comments.each do |comment| %>
+        <p><%=comment.content%> | <%=comment.created_at%></p>
+      <%end%>
+    </div>
+  </div>
+</div>

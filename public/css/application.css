@@ -5,3 +5,7 @@
   border: solid black 1px;
   overflow: scroll;
 }
+
+.thumbnail{
+  text-align: center;
+}
