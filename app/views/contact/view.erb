@@ -14,13 +14,14 @@
         <p><%=comment.content%> | <%=comment.created_at%>
           <br>
   <!--    The following allows for deleting Comment -->
-
-          <form action="/comment/<%=comment.id%>/delete" method="post">
+        <div id="delete_form">
+          <form id="action" action="/comment/<%=comment.id%>/delete" method="post">
                 <div style="margin:0;padding:0">
                 <input name="_method" type="hidden" value="delete"/>
                 <input type='submit' value='Delete Comment' />
               </div>
           </form>
+        </div>
         </p>
       </div>
       <%end%>

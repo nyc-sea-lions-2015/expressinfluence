@@ -17,19 +17,17 @@ $(document).ready(function() {
     });
 });
 
-$('#comment_form_submit').on('submit',function(e){
-    e.preventDefault();
+  $('#delete_form').on('click', function(e){
+      e.preventDefault();
+
+      var $target = $(event.target);
+      var href = $('#action').attr('action')
+
       $.ajax({
-      url: "/comment/new",
-      type: "post",
-      data: $('#comment_form').serialize(),
-      success: function(response){
-        console.log(response)
-        $('.comment_table').first().append(response)
-      },
-      error: function(response){
-        console.log(response.status)
-      }
-    })
-    });
+        type: "DELETE",
+        url: href,
+      }).done(function(response){
+        $target.parents('.comment_table').remove()
+      });
+  });
 });
