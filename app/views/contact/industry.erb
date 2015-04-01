@@ -2,7 +2,7 @@
   <div class="contact-list">
     <ol>
       <% @contacts.each do |contact| %>
-        <dt><li class="contact"><a href='/contact/<%= contact.id %>'><%= contact.name %> | <%=contact.industry%></a></li></dt>
+        <dt><li class="contact"><a href='/contact/<%= contact.id %>'><%= contact.name %></a><dd>Created: <%=time(contact)%> minutes ago</dd></li></dt>
       <%end%>
     </ol>
   </div>
