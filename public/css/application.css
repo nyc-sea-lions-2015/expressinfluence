@@ -10,6 +10,19 @@
   text-align: center;
 }
 
-.list-grou{
+.list-group{
   text-align: center;
   }
+
+body {
+  background: url('/tree.jpg');
+}
+
+.auth-login{
+  text-align: center;
+}
+
+#signup {
+  text-align: center;
+}
+
