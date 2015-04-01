@@ -3,8 +3,16 @@
   height: 400px;
   width: 45%;
   float: left;
-  border: solid blue 1px;
+  border: solid #cccccc 1px;
   overflow: scroll;
+}
+a{
+  color: #121D27
+}
+
+.auth-login{
+  height:100vh;
+  background-image: url('/tree.jpg');
 }
 
 .contact-tabs{
