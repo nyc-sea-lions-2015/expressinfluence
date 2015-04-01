@@ -26,10 +26,27 @@ get '/contact/:id' do
   erb :'contact/view'
 end
 
+get '/contact/edit/:id' do
+  @contact = Contact.find(params[:id])
+
+  erb :'/contact/edit'
+end
+
+put '/contact/edit/:id' do
+  p params
+  p params
+  p params
+
+  @contact = Contact.find(params[:id])
+  @contact.industry = params[:industry]
+  @contact.name = params[:name]
+  @contact.save
+  redirect "/contact/#{@contact.id}"
+end
+
 delete '/contact/delete/:id' do
-  p params
-  p params
   @contact = Contact.find(params[:id])
   @contact.destroy
+
   redirect '/'
 end
