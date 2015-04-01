@@ -1,0 +1,15 @@
+ <div id="container">
+    <h4><%= @contact.name %></h4>
+    <h5><%= @contact.industry%></h5>
+    <% if @comment %>
+        <form action="/comment/<%=@comment.id%>/edit/<%= @contact.id %>" method="post" id="edit">
+          <br>
+          <input type="hidden" name="_method" value="put">
+          <br>
+          <textarea name="content" id="styled" onfocus="this.value=''; setbg('#e5fff3');" onblur="setbg('white')"><%= @comment.content %></textarea>
+          <br>
+          <input type="submit">
+          <br>
+          </form>
+    <% end %>
+</div>
