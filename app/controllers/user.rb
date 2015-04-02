@@ -1,5 +1,5 @@
 get '/user/:id' do
   @user = User.find(params[:id])
-  @contacts = Contact.where(user_id: params[:id])
+  @contacts = @user.contacts
   erb :'user/home'
 end

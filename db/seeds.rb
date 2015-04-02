@@ -15,11 +15,7 @@ com6 = Comment.create(content: "Is greek and enjoys greek food.", user_id: kev.i
 
 
 15.times do
-  Contact.create(
-    user_id: kev.id,
-    name: Faker::Name.first_name,
-    industry: 'Technology'
-    )
+  kev.contacts.create(name: Faker::Name.first_name, industry: 'Technology')
 end
 
 15.times do
@@ -29,6 +25,7 @@ end
     industry: 'Finance'
     )
 end
+
 @contacts = []
 15.times do
   @contacts << Contact.create(

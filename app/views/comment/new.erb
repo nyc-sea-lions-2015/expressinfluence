@@ -1,14 +1,14 @@
 <br>
 <div id="comment_form">
-<div class="list-group">
-<h1>Comment on <%=@contact.name%></h1>
-<hr>
-<form action= '/comment/new/<%=@contact.id%>' method='post'>
-  <textarea cols="15" rows="7" placeholder='content' name='content' ></textarea><br><br>
-  </select>
-  <br>
-  <br>
-  <input id='comment_form_submit' type='submit' value='Generate Comment!' />
-</form>
-</div>
+  <div class="list-group">
+    <h1>Comment on <%=@contact.name%></h1>
+    <hr>
+    <form action= '/comment/new/<%=@contact.id%>' method='post'>
+      <textarea cols="15" rows="7" placeholder='content' name='content' ></textarea><br><br>
+      </select>
+      <br>
+      <br>
+      <input id='comment_form_submit' type='submit' value='Generate Comment!' />
+    </form>
+  </div>
 </div>

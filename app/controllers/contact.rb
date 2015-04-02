@@ -1,11 +1,6 @@
 get '/contact/search' do
-
-  @industry = params[:industry]
-  @contacts = Contact.where(industry: @industry)
-
-
-    erb :'contact/industry'
-
+  @contacts = Contact.where(industry: params[:industry])
+  erb :'contact/industry'
 end
 
 get '/contact/new' do
@@ -35,6 +30,8 @@ end
 put '/contact/edit/:id' do
 
   @contact = Contact.find(params[:id])
+  # ORRRRR... you could try .update which takes a hash
+  # e.g. .update(name: params[:name]...)
   @contact.industry = params[:industry]
   @contact.name = params[:name]
   @contact.save

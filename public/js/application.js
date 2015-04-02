@@ -9,7 +9,8 @@ $(document).ready(function() {
       url: href,
       type: "get",
       success: function(response){
-        $('#form_slot').append(response)
+        debugger
+        $("div.contact_buttons").prepend(response)
       },
       error: function(response){
         console.log(response.status);
