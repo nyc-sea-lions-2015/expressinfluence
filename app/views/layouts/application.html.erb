@@ -6,15 +6,18 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-  <% if session[:user_id] %>
-      <a href="/logout">Logout</a>
-      <% user = User.find_by(id: session[:user_id])%>
-      | <%= user.email %>
-  <%else%>
-      <a href="/sign_up">Signup</a>
+  <body>
+      <% if session[:user_id] %>
+    <ul id='header'>
+        <a class="btn btn-info btn-sm" id="home_button" href="/user/<%=session[:user_id]%>" role="button">Home</a>
+        <a class="btn btn-info btn-sm" id="home_button" href="sessions#destroy" role="button">Logout|</a>
+    </ul>
   <%end%>
+<%= yield %>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="/js/application.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>

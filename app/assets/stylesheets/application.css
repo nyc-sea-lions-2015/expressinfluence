@@ -1,15 +1,77 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.contact-list{
+  background-color: gray;
+  height: 400px;
+  width: 45%;
+  float: left;
+  border: solid #cccccc 1px;
+  overflow: scroll;
+}
+a{
+  color: #121D27
+}
+
+.auth-login{
+  height:100vh;
+  background-image: url('/tree.jpg');
+}
+
+.contact-tabs{
+  display:inline !important;
+}
+
+.jumbotron{
+  text-align: center;
+}
+.thumbnail{
+  text-align: center;
+}
+
+.list-group{
+  text-align: center;
+  }
+
+body {
+  background-color: gray;
+}
+
+.auth-login{
+  text-align: center;
+}
+
+#signup {
+  text-align: center;
+}
+
+#header li {
+  display: inline;
+  position: fixed;
+}
+
+.btn-group-sm>.btn, .btn-sm{
+  float: right;
+}
+
+.contact_buttons{
+  list-style: none;
+}
+
+.contact_buttons li{
+  display: inline;
+}
+
+input {
+  border: 3px solid #cccccc;
+  padding: 5px;
+  font-family: Cursive, sans-serif;
+}
+
+textarea {
+  width: 600px;
+  height: 120px;
+  border: 3px solid #cccccc;
+  padding: 5px;
+  font-family: Cursive, sans-serif;
+  background-image: url('/tree.jpg');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}

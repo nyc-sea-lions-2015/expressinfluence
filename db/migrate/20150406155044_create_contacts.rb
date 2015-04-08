@@ -4,6 +4,8 @@ class CreateContacts < ActiveRecord::Migration
       t.string :name, null: false
       t.string :industry
       t.references :user
+
+      t.timestamps
     end
   end
 end

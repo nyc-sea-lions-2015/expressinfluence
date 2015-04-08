@@ -17,20 +17,24 @@ ActiveRecord::Schema.define(version: 20150406155044) do
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.string  "content",    null: false
-    t.integer "user_id",    null: false
-    t.integer "contact_id", null: false
+    t.string   "content",    null: false
+    t.integer  "user_id",    null: false
+    t.integer  "contact_id", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "contacts", force: :cascade do |t|
-    t.string  "name",     null: false
-    t.string  "industry"
-    t.integer "user_id"
+    t.string   "name",       null: false
+    t.string   "industry"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email"
-    t.string   "password_digest"
+    t.string   "email",           null: false
+    t.string   "password_digest", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
